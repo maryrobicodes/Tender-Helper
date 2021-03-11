@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+@media print { 
+    @page { 
+        margin-top: 0; 
+        margin-bottom: 0; 
+    } 
+    body { 
+        padding-top: 72px; 
+        padding-bottom: 72px ; 
+    } 
+} 
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* form page */
+#letter-info {
+padding-left: 40px;
+padding-right: 40px;
+}
+
+#coname,  #codirector, #orname, #oraddress, #ortno, #ortname {
+width: 75%;
+ }
+
+/* Letter Format */
+#date {
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
+#orgadd {
+	margin-bottom: 40px;
+}
+#ref, #letter, #extra1, #extra2 {
+	margin-bottom: 30px;
+}
+#director {
+	margin-top: 60px;
+}
+#showletter {
+	border:thin solid #666666;
+	padding-left: 80px;
+}
+#print-bu {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}

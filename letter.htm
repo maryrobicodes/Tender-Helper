@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TENDER-HELPER-LETTERS</title>
+<script src="java/tender-helper.js"></script>
+<script src="java/jquery-3.6.0.min.js"></script>
+<script src="java/currency.min.js"></script>
+
+
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="letter-info">
+<h2>Kindly fill out the information below to so that we can format your letter</h2>
+
+  <fieldset>
+  <legend>Date for the letter</legend>
+  <label for="fname">Insert the date for the letter:</label><br>
+  <input type="date" id="idate" name="tno" value="2021-03-01"><br>
+  </fieldset>
+  
+  <fieldset>
+  <legend>Company Details</legend>
+    <label for="fname">Company Name:</label><br>
+  <input type="text" id="coname" name="tno" value="COMPANY NAME"><br>
+    <label for="fname">Address:</label><br>
+  <input type="number" id="coaddress" name="tno" value="000"><br>
+    <label for="fname">Postal Code:</label><br>
+  <input type="number" id="cocode" name="tno" value="000"><br>
+    <label for="fname">County:</label><br>
+  <input type="text" id="cocounty" name="tno" value="COUNTY"><br>
+  <label for="fname">Director's Name:</label><br>
+  <input type="text" id="codirector" name="tno" value="DIRECTORS NAME"><br>
+  </fieldset>
+  
+  <fieldset>
+  <legend>Government / Organization Details</legend> 
+    <label for="fname">Organization Person Authority:</label><br>
+  <input type="text" id="orperson" name="tno" value="MANAGING DIRECTOR"><br>     
+  <label for="fname">Organization Name:</label><br>
+  <input type="text" id="orname" name="tno" value="ORGANIZATION NAME"><br>
+  <label for="fname">Organizational Address:</label><br>
+	<input type="text" id="oraddress" name="tno" value="ORGANIZATION ADDRESS"><br>
+    <label for="fname">Tender Number:</label><br>
+  <input type="text" id="ortno" name="tno" value="TENDER NUMBER"><br>
+    <label for="fname">Tender Name:</label><br>
+  <input type="text" id="ortname" name="tno" value="TENDER NAME"><br>
+  </fieldset>
+  
+  <fieldset>
+  <legend>Other Details</legend>
+  <label for="fname">Amount (optional: For acceptance letters or Form of tender amount):</label><br>
+  <input type="number" id="amount" name="tno" value="000"><br>
+    <label for="fname">Amount in words:</label><br>
+  <input type="text" id="amountwords" name="tno" value="ZERO"><br>
+  </fieldset>
+  <button onclick="letters()">Submit</button>
+</div>
+
+
+
+
+
+<div class="row" id="the-letters">
+  <div class="column left" style="background-color:#aaa;">
+<div id="lettertype">
+<h1>click on the letter you want</h1>
+<h2></h2>
+<ul>
+<li><button onclick="acceptance()">Acceptance Letter</button></li>
+<li><button onclick="poa1()">Power of Attorney - Style 1</button></li>
+<li><button onclick="lh1()">Litigation History - Style 1</button></li>
+<li><button onclick="debarr1()">Debarrment Statement - Style 1</button></li>
+<li><button onclick="debarr2()">Debarrment Statement - Style 2</button></li>
+<li><button onclick="anti1()">Anti-Corruption Statement - Style 1</button></li>
+<li><button onclick="conflict1()">Conflict of Intrest - Style 1</button></li>
+<li><button onclick="employ1()">Fair Employment Statement - Style 1</button></li>
+<li><button onclick="perform()">Non Performance Statement</button></li>
+<li><button onclick="cont1()">Company Continuity Statement - Style 1</button></li>
+<li><button onclick="cont2()">Company Continuity Statement - Style 2</button></li>
+<li><button onclick="warranty1()">Warranty Details - Style 1</button></li>
+<li><button onclick="compliance1()">Statement Of Compliance - Style 1</button></li>
+<li><button onclick="eligiblegoods()">Eligible Goods</button></li>
+<li><button onclick="emp1()">Availability of Employees</button></li>
+<li><button onclick="insure()">Insurance Commitment</button></li>
+<li><button onclick="local1()">Local use of resource statement</button></li>
+<li><button onclick="nodev()">No Deviation statement</button></li>
+</ul>
+<button onclick="changeinfo()">Change Company or Tender Information</button>
+</div>
+  </div>
+  <div class="column right">
+<div id="showletter">
+
+<div id="date"></div>
+<div id="orgadd"></div>
+<div id="ref"></div>
+<div id="letter"></div>
+<div id="extra1"></div>
+<div id="extra2"></div>
+<div id="director"></div>
+
+<button onclick="printme()" id="print-bu">Print</button>
+</div>
+  </div>
+  
+</div>
+
+<script>
+document.getElementById("the-letters").style.display = "none";
+</script>
+</body>
+</html>
